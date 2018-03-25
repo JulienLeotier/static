@@ -49,23 +49,23 @@ function sendPicture() {
     'img': picture
   }
   xhr.send(JSON.stringify(data))
-  xhr.onloadend = (response) => {
-    console.log(response)
-    $.ajax({
-      url: "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Description,Tags&subscription-key=e161ebfcf86444509fdb1df05381f724",
-      beforeSend: function (xhrObj) {
-        xhrObj.setRequestHeader("Content-type: application/json");
-      },
-      type: "POST",
-      data: '{"url": "https://www.rendreservice.fr:8080/images.jpeg"}',
-    })
-      .done(function (data) {
-        console.log(data)
-      })
-      .fail(function () {
+  // xhr.onloadend = (response) => {
+  //   console.log(response)
+  //   $.ajax({
+  //     url: "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Description,Tags&subscription-key=e161ebfcf86444509fdb1df05381f724",
+  //     beforeSend: function (xhrObj) {
+  //       xhrObj.setRequestHeader("Content-type: application/json");
+  //     },
+  //     type: "POST",
+  //     data: '{"url": "https://www.rendreservice.fr:8080/images.jpeg"}',
+  //   })
+  //     .done(function (data) {
+  //       console.log(data)
+  //     })
+  //     .fail(function () {
 
-      });
-  }
+  //     });
+  // }
 }
 
 
