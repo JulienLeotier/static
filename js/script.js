@@ -5,7 +5,7 @@ let width = 500,
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas')
 
-navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+navigator.mediaDevices.getUserMedia({ audio: true, video: { facingMode: { exact: "environment" } } })
   .then(function (stream) {
     video.srcObject = stream
     video.play()
