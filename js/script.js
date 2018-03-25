@@ -51,7 +51,7 @@ function sendPicture() {
   }
   setTimeout(()=>{
     $.ajax({
-      url: "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Description&details=Landmarks&language=fr",
+      url: "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Description&details=Landmarks&language=en",
       beforeSend: function (xhrObj) {
         xhrObj.setRequestHeader("Content-type", "application/json");
         xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "e161ebfcf86444509fdb1df05381f724");
