@@ -62,7 +62,7 @@ function sendPicture() {
         console.log(data)
       })
       .fail(function () {
-
+        console.log('toto')
       });
   },3000)
 }
