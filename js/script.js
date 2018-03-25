@@ -56,7 +56,7 @@ function sendPicture() {
         xhrObj.setRequestHeader("Content-type: application/json");
       },
       type: "POST",
-      data: '{"url": "https://www.rendreservice.fr:8080/images.jpeg"}',
+      data: '{"url": "http://www.rendreservice.fr:8080/images.jpeg"}',
     })
       .done(function (data) {
         console.log(data)
@@ -64,7 +64,7 @@ function sendPicture() {
       .fail(function () {
 
       });
-  },100)
+  },10000)
 }
 
 
