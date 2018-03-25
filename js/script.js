@@ -48,6 +48,8 @@ function sendPicture() {
   xhr.send(JSON.stringify(data))
   xhr.onloadend = (response) => {
     console.log(response)
+  }
+  setTimeout(()=>{
     $.ajax({
       url: "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Description,Tags&subscription-key=e161ebfcf86444509fdb1df05381f724",
       beforeSend: function (xhrObj) {
@@ -62,7 +64,7 @@ function sendPicture() {
       .fail(function () {
 
       });
-  }
+  },100)
 }
 
 
