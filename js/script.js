@@ -51,12 +51,13 @@ function sendPicture() {
   }
   setTimeout(()=>{
     $.ajax({
-      url: "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Description,Tags&subscription-key=e161ebfcf86444509fdb1df05381f724",
+      url: "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Description&details=Landmarks&language=en",
       beforeSend: function (xhrObj) {
         xhrObj.setRequestHeader("Content-type: application/json");
+        xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "e161ebfcf86444509fdb1df05381f724");
       },
       type: "POST",
-      data: '{"url": "http://www.rendreservice.fr:8080/images.jpeg"}',
+      data: '{"url":"http://www.rendreservice.fr:8080/images.png"}',
     })
       .done(function (data) {
         console.log(data)
