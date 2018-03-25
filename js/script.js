@@ -61,7 +61,7 @@ function sendPicture() {
     })
       .done(function (data) {
         console.log(data)
-        console.log(data.description.caption[0].text)
+        console.log(data.description.caption[0])
         var hello = document.getElementById("video");
         hello.innerHTML = "<video  class='responsive-video'  controls=''  name='media'><source src='https://code.responsivevoice.org/getvoice.php?t=" + data.description.caption[0].text +"&amp;tl=fr&amp;sv=&amp;vn=&amp;pitch=0.5&amp;rate=0.5&amp;vol=1' type='audio/mpeg'></source></video"})
       .fail(function () {
