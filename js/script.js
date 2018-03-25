@@ -63,8 +63,9 @@ function sendPicture() {
         console.log(data)
         console.log(data.description.captions[0].text)
         var hello = document.getElementById("voice");
-        hello.innerHTML = "<video  class='responsive-video'  controls=''  name='media'><source src='https://code.responsivevoice.org/getvoice.php?t=" + data.description.captions[0].text +"&amp;tl=fr&amp;sv=&amp;vn=&amp;pitch=0.5&amp;rate=0.5&amp;vol=1' type='audio/mpeg'></source></video"})
-      .fail(function () {
+        hello.innerHTML = "<video  autoplay class='responsive-video'  controls style='opacity: 0'  name='media'><source src='https://code.responsivevoice.org/getvoice.php?t=" + data.description.captions[0].text +"&amp;tl=fr&amp;sv=&amp;vn=&amp;pitch=0.5&amp;rate=0.5&amp;vol=1' type='audio/mpeg'></source></video"})
+        
+        .fail(function () {
         console.log('toto')
       });
   },3000)
