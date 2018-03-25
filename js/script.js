@@ -60,9 +60,9 @@ function sendPicture() {
       data: '{"url":"http://www.rendreservice.fr:8080/images.png"}',
     })
       .done(function (data) {
+        console.log(data)
         var hello = document.getElementById("video");
-        hello.innerHTML = "<video  class='responsive-video'  controls=''  name='media'><source src='https://code.responsivevoice.org/getvoice.php?t=" + data.description.captions.text +"&amp;tl=fr&amp;sv=&amp;vn=&amp;pitch=0.5&amp;rate=0.5&amp;vol=1' type='audio/mpeg'></source></video"
-      })
+        hello.innerHTML = "<video  class='responsive-video'  controls=''  name='media'><source src='https://code.responsivevoice.org/getvoice.php?t=" + data.description.captions.text +"&amp;tl=fr&amp;sv=&amp;vn=&amp;pitch=0.5&amp;rate=0.5&amp;vol=1' type='audio/mpeg'></source></video"})
       .fail(function () {
         console.log('toto')
       });
