@@ -44,7 +44,7 @@ function sendPicture() {
   let picture = takePicture()
   let xhr = new XMLHttpRequest()
   xhr.open('POST', 'https://www.rendreservice.fr/images/', true)
-  xhrObj.setRequestHeader("Content-type: application/json");
+  xhr.setRequestHeader("Content-type: application/json");
   let data = {
     'img': picture
   }
