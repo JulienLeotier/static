@@ -29,13 +29,10 @@ video.addEventListener('canplay', function (e) {
 function takePicture() {
   const context = canvas.getContext('2d')
   if (width && height) {
-
     canvas.width = width
-    canvas.height = height
-
+    canvas.height = heigh
     context.drawImage(video, 0, 0, width, height)
     const imgUrl = canvas.toDataURL('image/jpeg')
-
     return imgUrl
   }
 }
@@ -44,7 +41,7 @@ function sendPicture() {
   let picture = takePicture()
   let xhr = new XMLHttpRequest()
   xhr.open('POST', 'https://www.rendreservice.fr/images/', true)
-  xhr.setRequestHeader("Content-type: application/json");
+  xhr.setRequestHeader("Content-type", "application/json");
   let data = {
     'img': picture
   }
