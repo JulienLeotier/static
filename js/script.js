@@ -64,7 +64,7 @@ function sendPicture() {
       .fail(function () {
 
       });
-  },10000)
+  },3000)
 }
 
 
