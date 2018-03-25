@@ -30,7 +30,7 @@ function takePicture() {
   const context = canvas.getContext('2d')
   if (width && height) {
     canvas.width = width
-    canvas.height = heigh
+    canvas.height = height
     context.drawImage(video, 0, 0, width, height)
     const imgUrl = canvas.toDataURL('image/jpeg')
     return imgUrl
